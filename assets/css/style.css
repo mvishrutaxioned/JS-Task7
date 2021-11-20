@@ -130,18 +130,11 @@ li {
   align-items: center;
 }
 
-.mySlides {
+.slider li {
   display: none;
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.slider .mySlides.active {
+.slider li.active {
   display: flex;
   animation: fade .5s ease forwards;
 }
@@ -239,17 +232,7 @@ li {
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-
+  
 }
 
-/* Fading animation */
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
+@keyframes fade { to { opacity: 1; } }
