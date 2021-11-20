@@ -231,6 +231,8 @@ li {
 
 .prev { left: 0; }
 .next { right: 0; }
+.none { display: none; }
+.block { display: block; }
 
 /*=================================
   main styling ends here
