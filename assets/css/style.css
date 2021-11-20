@@ -109,46 +109,125 @@ li {
   margin: 0 auto;
 }
 /*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
   main styling starts here
 =================================*/
+.banner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: absolute;
+}
 
+.wrapper {
+  width: 60%;
+  position: relative;
+}
 
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.slider li {
+  display: none;
+}
 
+.slider li.active {
+  display: flex;
+  animation: fade .5s ease forwards;
+}
 
+.slider li img {
+  width: 100%;
+}
 
+.slider-dots {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
+.slider-dots a {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fffff000;
+  font-size: 5px;
+}
+
+.slider-dots li a.active::after {
+  background: #000;
+}
+
+.slider-dots a::after {
+  content: '\f1ce';
+  border-radius: 50%;
+  color: #000;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: 'Font Awesome 5 Free';
+}
+
+.slider-dots a:hover::after {
+  color: #000;
+  background: #000;
+}
+
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: transparent;
+  z-index: 9;
+}
+
+.prev::before {
+  content: '\f053';
+  position: absolute;
+  left: 20px;
+  color: #fff;
+  font-size: 46px;
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  visibility: visible;
+}
+
+.next::before {
+  content: '\f054';
+  position: absolute;
+  right: 20px;
+  color: #fff;
+  font-size: 46px;
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  visibility: visible;
+}
+
+.prev:hover::before,
+.next:hover::before {
+  color: #666;
+  transition: .5s ease;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
@@ -156,4 +235,6 @@ li {
 
 
 
-}  
+}
+
+@keyframes fade { to { opacity: 1; } }
